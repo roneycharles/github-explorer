@@ -46,7 +46,7 @@ const Dashboard: React.FunctionComponent = () => {
     }
 
     try {
-      const response = await api.get<Repository>(`/repos/${newRepo}`);
+      const response = await api.get<Repository>(`/users/${newRepo}/repos`);
 
       const repository = response.data;
 
